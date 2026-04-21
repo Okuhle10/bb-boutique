@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bloom & Bold Boutique</title>
+    <style>
+        /* Base Styles */
+        body {
+            font-family: 'Georgia', serif;
+            line-height: 1.6;
+            color: #2b2b2b;
+            margin: 0;
+            padding: 0;
+            background-color: #faf9f6;
+        }
+        
+        /* Typography */
+        h1, h2, h3 {
+            font-family: 'Playfair Display', serif;
+            font-weight: normal;
+        }
+
+        /* Navigation & Header */
+        header {
+            background-color: #2c4c3b;
+            color: #ffffff;
+            padding: 2rem 0;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0 0 0.5rem 0;
+            font-size: 2.5rem;
+        }
+        header p {
+            margin: 0;
+            font-style: italic;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            background: #1e3629;
+            padding: 15px;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        nav a {
+            color: #ffffff;
+            text-decoration: none;
+            font-family: 'Arial', sans-serif;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        nav a:hover {
+            color: #d4a373;
+        }
+
+        /* Layout */
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        .hero {
+            text-align: center;
+            padding: 4rem 2rem;
+            background-color: #e8edea;
+            border-radius: 8px;
+            margin-bottom: 3rem;
+        }
+        .section-title {
+            text-align: center;
+            margin-bottom: 2rem;
+            color: #2c4c3b;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 3rem;
+        }
+        
+        /* Cards */
+        .card {
+            background: #ffffff;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+            text-align: center;
+        }
+        
+        /* Forms & Buttons */
+        label {
+            display: block;
+            text-align: left;
+            margin-top: 15px;
+            font-family: 'Arial', sans-serif;
+            font-size: 0.85rem;
+            color: #555;
+        }
+        input[type="date"] {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            font-family: inherit;
+        }
+        button {
+            background-color: #2c4c3b;
+            color: #ffffff;
+            border: none;
+            padding: 12px 24px;
+            margin-top: 20px;
+            cursor: pointer;
+            width: 100%;
+            font-family: 'Arial', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #1e3629;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #2c4c3b;
+            color: #ffffff;
+            text-align: center;
+            padding: 2rem;
+            font-family: 'Arial', sans-serif;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Bloom &amp; Bold Boutique</h1>
+        <p>Curated botanical gifts and floral education</p>
+    </header>
+
+    <nav>
+        <a href="#about">Our Story</a>
+        <a href="#shop">Shop Online</a>
+        <a href="#subscriptions">Weekly Bloom</a>
+        <a href="#blog">Flower Care</a>
+    </nav>
+
+    <main class="container">
+        <section class="hero">
+            <h2>Sustainably grown floral designs</h2>
+            <p>Celebrating the natural beauty of each season through wild and architectural arrangements. Transform your space with locally sourced blooms.</p>
+        </section>
+
+        <section id="about">
+            <h2 class="section-title">Our History</h2>
+            <div style="max-width: 800px; margin: 0 auto 3rem auto; text-align: center;">
+                <p>Bloom &amp; Bold began in 2016 as a mobile flower truck serving local farmers' markets. Founded by floral designer Maya Chen, we quickly gained a reputation for our unique approach to floral artistry. By 2021, we proudly opened our first brick-and-mortar retail space, and we are now expanding to offer a seamless digital experience.</p>
+            </div>
+        </section>
+
+        <section id="shop">
+            <h2 class="section-title">Shop Our Arrangements</h2>
+            <p style="text-align: center; margin-bottom: 2rem;">Perfect for birthdays, anniversaries, bridal showers, or corporate events.</p>
+            <div class="grid">
+                <div class="card">
+                    <h3>The Urban Professional</h3>
+                    <p>High-end, convenient gift options designed for modern office decor or special anniversaries.</p>
+                    <label for="delivery-date-1">Select Delivery Date:</label>
+                    <input type="date" id="delivery-date-1" name="delivery-date-1" required>
+                    <button>Add to Cart</button>
+                </div>
+                <div class="card">
+                    <h3>The Event Centerpiece</h3>
+                    <p>Unique, architectural centerpieces crafted specifically for bridal showers and luncheons.</p>
+                    <label for="delivery-date-2">Select Delivery Date:</label>
+                    <input type="date" id="delivery-date-2" name="delivery-date-2" required>
+                    <button>Add to Cart</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="subscriptions">
+            <h2 class="section-title">Weekly Bloom Subscription</h2>
+            <div class="card" style="max-width: 600px; margin: 0 auto 3rem auto;">
+                <h3>Never Be Without Fresh Flowers</h3>
+                <p>Join the "Weekly Bloom" and receive recurring floral deliveries directly to your door. We aim to build a community of active monthly subscribers.</p>
+                <button>Sign Up for Subscription</button>
+            </div>
+        </section>
+
+        <section id="blog">
+            <h2 class="section-title">Flower Care Blog</h2>
+            <div class="grid">
+                <div class="card">
+                    <h3>Extend the Life of Your Bouquet</h3>
+                    <p>Learn professional tips from Maya Chen on how to properly hydrate and trim your seasonal blooms to maximize their lifespan.</p>
+                    <a href="#" style="color: #2c4c3b; font-weight: bold; text-decoration: none;">Read Article &rarr;</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Bloom &amp; Bold Boutique. Designed for WEDE2026.</p>
+    </footer>
+
+</body>
+</html>
